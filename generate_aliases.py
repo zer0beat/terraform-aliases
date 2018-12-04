@@ -69,6 +69,7 @@ def main():
     args = [
         ('y', '-auto-approve', ['a', 'd'], None),
         ('u', '-upgrade', ['in'], None),
+        ('de', '--destroy', ['p'], ['y']),
     ]
 
     # these accept a value, so they need to be at the end and
