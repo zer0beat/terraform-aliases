@@ -25,7 +25,7 @@ See [the full list](.terraform_aliases).
 
 ### Installation
 
-You can directly download the [`.terraform_aliases` file](https://rawgit.com/zer0beat/terraform-alias/master/.terraform_aliases)
+You can directly download the [`.terraform_aliases` file](https://raw.githubusercontent.com/zer0beat/terraform-aliases/master/.terraform_aliases)
 and save it in your $HOME directory, then edit your .bashrc/.zshrc file with:
 
 ```sh
