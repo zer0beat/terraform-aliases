@@ -28,7 +28,10 @@ except NameError:
 
 def main():
     # (alias, full, allow_when_oneof, incompatible_with)
-    cmds = [('tf', 'terraform', None, None)]
+    cmds = [
+        ('tf', 'terraform', None, None),
+        ('tg', 'terragrunt', None, None)
+    ]
 
     globs = []
 
@@ -51,7 +54,7 @@ def main():
         ('w', 'workspace', None, None),
         ('s', 'state', None, None),
         ('fu', 'force-unlock', None, None),
-        ]
+    ]
 
     res = [
         ('st', 'select', ['w'], None),
@@ -84,7 +87,7 @@ def main():
         (res, True, True),
         (args, True, False),
         (positional_args, True, True),
-        ]
+    ]
 
     out = gen(parts)
     out = filter(is_valid, out)
@@ -98,7 +101,7 @@ def main():
             print(f.read())
     for cmd in out:
         print("alias {}='{}'".format(''.join([a[0] for a in cmd]),
-              ' '.join([a[1] for a in cmd])))
+                                     ' '.join([a[1] for a in cmd])))
 
 
 def gen(parts):
@@ -179,6 +182,3 @@ def diff(a, b):
 
 if __name__ == '__main__':
     main()
-
-
-			
