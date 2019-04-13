@@ -38,6 +38,23 @@ and save it in your $HOME directory, then edit your .bashrc/.zshrc file with:
 ```sh
 function terraform() { echo "+ terraform $@"; command terraform $@; }
 ```
+
+### Terragrunt aliases
+
+
+You can directly download the [`.terragrunt_aliases` file](https://raw.githubusercontent.com/zer0beat/terraform-aliases/master/.terragrunt_aliases)
+and save it in your $HOME directory, then edit your .bashrc/.zshrc file with:
+
+```sh
+[ -f ~/.terragrunt_aliases ] && source ~/.terragrunt_aliases
+```
+
+**Print the full command before running it:** Add this to your `.bashrc` or
+`.zshrc` file:
+
+```sh
+function terragrunt() { echo "+ terragrunt $@"; command terragrunt $@; }
+```
   
 ### FAQ
 
